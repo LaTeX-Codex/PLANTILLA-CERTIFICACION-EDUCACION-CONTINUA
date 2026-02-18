@@ -1,0 +1,232 @@
+\documentclass[letterpaper, 12pt, titlepage]{article} % Tipo de documento, configurado con: tamaño carta, tamaño de fuente 12pt, inclusión de página de título
+\sloppy
+\usepackage{wallpaper}
+\CenterWallPaper{1.0}{bg.jpg}
+% ================================================================
+%* PAQUETES BÁSICOS Y CONFIGURACIÓN ESENCIAL
+% ================================================================
+\usepackage[utf8]{inputenc}         % Codificación de caracteres UTF-8
+\usepackage[spanish]{babel}         % Localización en español (guiones, títulos)
+\usepackage[left=2cm, right=2cm, top=4.25cm, bottom=3.1cm]{geometry}   % Configuración de márgenes de página
+%\usepackage[htt]{hyphenat}
+
+% ================================================================
+%* TIPOGRAFÍA Y FORMATO DE TEXTO
+% ================================================================
+%\usepackage{fontspec}              % Manejo de fuentes con XeLaTeX
+%\setmainfont{Myriad Pro} % Fuente principal (Myriad Pro)
+\usepackage{courier}
+\renewcommand{\familydefault}{\ttdefault}
+%\usepackage{helvet}                         % Fuente Sans-Serif (Helvetica)
+%\renewcommand{\familydefault}{\sfdefault}   % Establece Helvet como fuente principal
+\usepackage{setspace}                       % Control de interlineado (1.5, doble espacio)
+\usepackage{parskip}                        % Espaciado entre párrafos (en lugar de sangría)
+%\usepackage{ragged2e}                       % Mejor manejo de justificación de texto
+
+\renewcommand{\thesection}{\Roman{section}} % Numeración romana para secciones
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} % Subsecciones: 1.1, 1.2...
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}} % Subsubsecciones: 1.1.1, 1.1.2...
+
+% ================================================================
+%* ELEMENTOS GRÁFICOS Y DISEÑO
+% ================================================================
+\usepackage{graphicx}               % Manejo de imágenes (inserción y escalado)
+
+% ================================================================
+%* TABLAS PROFESIONALES
+% ================================================================
+\usepackage{booktabs}              % Reglas tipográficas para tablas (formato APA)
+\usepackage{xltabular}             % Tablas largas que ocupan todo el ancho del texto
+\usepackage{array}
+\setlength{\extrarowheight}{5pt} % Ajusta este valor según necesites
+\usepackage[table]{xcolor}
+% ================================================================
+% LISTAS Y ESTRUCTURAS
+% ================================================================
+\usepackage{enumitem}                   % Personalización avanzada de listas
+\setlist{nosep, leftmargin=*, wide=0pt} % Listas ultra compactas
+
+% ================================================================
+%* HIPERVÍNCULOS Y METADATOS PDF
+% ================================================================
+\usepackage[hyphens]{url}
+\usepackage{hyperref}             % Hipervínculos y referencias internas
+\hypersetup{
+	breaklinks=true,                % Configuración de hipervínculos
+	colorlinks=true,                % Habilita los enlaces coloreados
+	linkcolor=blue,                 % Color de los enlaces internos
+	urlcolor=blue,                  % Color de los enlaces externos
+	citecolor=blue,                 % Color de las citas
+	pdfborder={0 0 0}               % Sin bordes en los enlaces
+}
+
+% ================================================================
+%* TAREAS PENDIENTES Y ANOTACIONES
+% ================================================================
+\setlength{\marginparwidth}{2cm} % Soluciona el problema de \todonotes
+\usepackage{todonotes} % Paquete principal
+\setuptodonotes{
+	size=\tiny, % Tamaño de las notas
+}
+% Comandos personalizados (opcional)
+\newcommand{\pendiente}[1]{\todo[color=red!30, inline]{#1}}
+\newcommand{\revisar}[1]{\todo[color=yellow!30, inline]{#1}}
+\newcommand{\actualizar}[1]{\todo[color=green!30, inline]{#1}}
+
+% ================================================================
+%! CONFIGURACIONES FINALES
+% ================================================================
+\newcommand{\universidad}{Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense} % Nombre de la universidad
+
+% ================================================================
+% PAQUETE LOREM IPSUM PARA TEXTO DE EJEMPLO, BORRAR EN PRODUCCIÓN
+% ================================================================
+\usepackage{lipsum} % Generador de texto de ejemplo
+
+% ================================================================
+% INICIO DEL DOCUMENTO (contenido principal)
+% ================================================================
+\begin{document}
+	\begin{titlepage}
+		\null
+		\vfill
+		\centering
+		\includegraphics[width=0.15\textwidth]{uraccan_logo.png}
+		
+		\section*{CERTIFICACIÓN DEL PROGRAMA CURRICULAR DE EDUCACIÓN CONTINUA}
+
+		\begin{xltabular}{\linewidth}{|c|c|c|}
+			\hline
+			\textbf{ÁREA ACADÉMICA} & \textbf{FORMA DE EDUCACIÓN CONTINUA} & \textbf{FECHA}\\
+			\hline
+			& & \\
+			\hline
+			\multicolumn{3}{|c|}{\textbf{INFORMACIÓN DE CERTIFICACIÓN}}\\
+			\hline
+			\multicolumn{3}{|l|}{\textbf{TÍTULO QUE OTORGA:}}\\
+			\hline
+			\textbf{DURACIÓN} & \textbf{TOTAL DE HORAS} & \textbf{TOTAL DE CRÉDITOS}\\
+			\hline
+			& & \\
+			\hline
+			\multicolumn{3}{|c|}{\textbf{MODALIDADES}}\\
+			\hline
+			\multicolumn{3}{|c|}{}\\
+			\hline
+			\multicolumn{3}{|X|}{Después de haber constatado que el documento cumple con lo establecido en el marco normativo de la URACCAN para la construcción de programas del Sistema de Estudios de Postgrado referido con la elaboración de Programas de Educación Continua [Diplomado Superior; Diplomado Comunitario; Curso; Seminario; Taller; Pasantía; Coloquio; Congreso; Foro; Cátedra; Simposio] y que además se han incorporado las observaciones brindadas por el Consejo Universitario en el Dictamen, la Dirección Postgrado da por Certificado el programa curricular del programa de educación continua:}\\
+			\multicolumn{3}{|c|}{}\\
+			\multicolumn{3}{|c|}{}\\
+			\multicolumn{3}{|c|}{}\\
+			\hline
+		\end{xltabular}
+		\vfill
+	\end{titlepage}
+	
+	\section{DATOS GENERALES}
+	
+	\begin{xltabular}{\linewidth}{|>\bfseries{l}|X|}
+		\hline
+		\cellcolor{black} \color{white} Nombre de la Institución & \universidad\\
+		\hline
+		\cellcolor{black} \color{white} Nombre del Programa & \\
+		\hline
+		\cellcolor{black} \color{white} Sede del Programa & \\
+		\hline
+		\cellcolor{black} \color{white} Tipo de Programa & \\
+		\hline
+		\cellcolor{black} \color{white} Área Académica & \\
+		\hline
+		\cellcolor{black} \color{white} Unidad Académica - Responsable & \\
+		\hline
+		\cellcolor{black} \color{white} Acreditación & \\
+		\hline
+		\cellcolor{black} \color{white} Título que se otorga & \\
+		\hline
+		\cellcolor{black} \color{white} Total de horas académicas & \\
+		\hline
+		\cellcolor{black} \color{white} Modalidad & \\
+		\hline
+		\cellcolor{black} \color{white} Autorizado por & \\
+		\hline
+		\cellcolor{black} \color{white} Firma y sello & \\
+		\cellcolor{black} \color{white} & \\
+		\cellcolor{black} \color{white} & \\
+		\cellcolor{black} \color{white} & \\
+		\hline
+	\end{xltabular}
+	
+	\section{INTRODUCCIÓN}
+	
+	\lipsum[1-2]
+	
+	\section{COMPETENCIAS}
+	
+	\begin{itemize}
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+	\end{itemize}
+	
+	\section{RESULTADOS DE APRENDIZAJE ESPERADO}
+	
+	\begin{itemize}
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+		\item \lipsum[1][1-4]
+	\end{itemize}
+	
+	\section{CONTENIDOS}
+	
+	\begin{xltabular}{\linewidth}{|c|X|c|c|c|}
+		\hline
+		\textbf{Bloque} & \textbf{Contenidos} & \textbf{HT} & \textbf{HP} & \textbf{TOTAL}\\
+		\hline
+		Bloque 1 & Tema 1 \begin{itemize}
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+		\end{itemize} & 2 & 2 & 4\\
+		\hline
+		Bloque 2 & Tema 2 \begin{itemize}
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+		\end{itemize} & 2 & 2 & 4\\
+		\hline
+		Bloque 3 & Tema 3 \begin{itemize}
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+		\end{itemize} & 2 & 2 & 4\\
+		\hline
+		Bloque 4 & Tema 4 \begin{itemize}
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+			\item \lipsum[1][1]
+		\end{itemize} & 2 & 2 & 4\\
+		\hline
+		\textbf{TOTAL} & & & & \\
+		\hline
+	\end{xltabular}
+	
+	\section{METODOLOGÍA}
+	
+	\lipsum[1-3]
+	
+	\section{CRITERIOS DE EVALUACIÓN}
+	
+	\lipsum[1-3]
+	
+	\section{REFERENCIAS}
+	
+	\hangindent=1in
+	Autor, A. (Año). \textit{Título de la obra}. Recuperado de \href{https://holamundo.com}{https://holamundo.com}
+\end{document}
